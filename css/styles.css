@@ -1,0 +1,188 @@
+/* =====================================================
+   PALETA FORZA MOTORSPORT (2023) & MINIMALISMO ELEGANTE
+   ===================================================== */
+:root {
+    --forza-dark: #0f1115;       /* Carbon Black */
+    --forza-charcoal: #181b22;   /* Paddock Asphalt */
+    --forza-red: #e81123;        /* Forza Motorsport Crimson */
+    --forza-red-hover: #c50d1d;
+    --forza-cyan: #00a8e8;       /* Telemetry Blue */
+    --forza-paddock: #f4f6f9;    /* Clean Showroom Light */
+    --forza-text-dark: #111827;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--forza-text-dark);
+    background-color: var(--forza-paddock);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.tracking-wide {
+    letter-spacing: 0.06em;
+}
+
+.max-w-600 {
+    max-width: 620px;
+}
+
+/* Colores de acento Forza */
+.text-forza-red {
+    color: var(--forza-red) !important;
+}
+
+.forza-eyebrow {
+    color: var(--forza-red);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.forza-brand-bar {
+    display: inline-block;
+    width: 6px;
+    height: 22px;
+    background-color: var(--forza-red);
+    border-radius: 2px;
+    transform: skewX(-12deg);
+}
+
+/* Navbar minimalista */
+.forza-navbar {
+    background-color: var(--forza-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.forza-nav-link {
+    color: #d1d5db !important;
+    font-size: 0.93rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.forza-nav-link:hover {
+    color: #ffffff !important;
+}
+
+.forza-badge-session {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    font-weight: 500;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+}
+
+/* Hero principal inspirado en captura 1 con paleta Forza */
+.forza-hero {
+    min-height: 840px;
+    background: 
+        linear-gradient(90deg, rgba(15, 17, 21, 0.94) 0%, rgba(15, 17, 21, 0.82) 50%, rgba(15, 17, 21, 0.45) 100%),
+        url('../Imagenes/Fondo-Mercedes-AMG-One.jpg') center/cover no-repeat;
+    border-bottom: 3px solid var(--forza-red);
+}
+
+/* Botones elegantes (bordes redondeados suaves de 8px) */
+.btn-forza-primary {
+    background-color: var(--forza-red);
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid var(--forza-red);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-forza-primary:hover {
+    background-color: var(--forza-red-hover);
+    border-color: var(--forza-red-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232, 17, 35, 0.3);
+}
+
+.btn-forza-outline-light {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-forza-outline-light:hover {
+    background-color: #ffffff;
+    color: var(--forza-dark);
+}
+
+.btn-forza-outline-dark {
+    background-color: transparent;
+    color: var(--forza-text-dark);
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-forza-outline-dark:hover {
+    border-color: var(--forza-text-dark);
+    background-color: var(--forza-text-dark);
+    color: #ffffff;
+}
+
+/* Sección de servicios y tarjetas minimalistas (inspiradas en captura 3) */
+.forza-bg-paddock {
+    background-color: var(--forza-paddock);
+}
+
+.forza-service-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.forza-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(15, 17, 21, 0.08);
+    border-color: rgba(232, 17, 35, 0.35);
+}
+
+.forza-icon-circle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    background-color: rgba(232, 17, 35, 0.08);
+    color: var(--forza-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inputs del formulario */
+.form-control:focus, .form-select:focus {
+    border-color: var(--forza-cyan);
+    box-shadow: 0 0 0 0.2rem rgba(0, 168, 232, 0.18);
+}
+
+/* Banner CTA inferior y Footer */
+.forza-cta-banner {
+    background-color: var(--forza-charcoal);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.forza-footer {
+    background-color: var(--forza-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.forza-modal-header {
+    background-color: var(--forza-dark);
+    border-bottom: 2px solid var(--forza-red);
+}

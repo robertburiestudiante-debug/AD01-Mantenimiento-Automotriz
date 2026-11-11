@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hudsen Tech Motorsport | Centro de Mantenimiento Automotriz</title>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans (Minimalista y elegante) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados Forza Motorsport Minimalist -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- HEADER Y NAVEGACIÓN (Módulo 1) -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark forza-navbar py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold tracking-wide d-flex align-items-center gap-2" href="#inicio">
+                    <span class="forza-brand-bar"></span>
+                    <span>Hudsen Tech <span class="text-forza-red">MOTORSPORT</span></span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="navbar-nav ms-auto me-lg-4 mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link forza-nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link forza-nav-link" href="#acerca">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link forza-nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link forza-nav-link d-none" id="navFormulario" href="#seccionFormulario">Agendar Cita</a></li>
+                        <li class="nav-item"><a class="nav-link forza-nav-link d-none" id="navMisMantenimientos" href="#seccionCliente">Mis Solicitudes</a></li>
+                        <li class="nav-item"><a class="nav-link forza-nav-link text-forza-red fw-semibold" id="navAdmin" href="#seccionAdmin">Administración</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <span id="etiquetaUsuario" class="badge forza-badge-session">Visitante</span>
+                        <button class="btn btn-forza-primary btn-sm px-3 py-2" id="btnAbrirLogin" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</button>
+                        <button class="btn btn-outline-light btn-sm px-3 py-2 d-none" id="btnCerrarSesion">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1">
+
+        <!-- MÓDULO 1: HERO PRINCIPAL -->
+        <section id="inicio" class="forza-hero d-flex align-items-center">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="forza-eyebrow mb-2">INGENIERÍA Y PRECISIÓN AUTOMOTRIZ</p>
+                        <h1 class="display-4 fw-bold text-white mb-3">
+                            Tu vehículo en manos de especialistas
+                        </h1>
+                        <p class="lead text-light opacity-75 mb-4">
+                            Mantenimiento preventivo, diagnóstico computarizado y servicio multimarca con trazabilidad digital en tiempo real y repuestos certificados.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#servicios" class="btn btn-forza-primary px-4 py-2">Conocer servicios</a>
+                            <button class="btn btn-forza-outline-light px-4 py-2" id="btnHeroAgendar">Agendar mantenimiento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 1: SECCIÓN ACERCA DE (2 COLUMNAS MINIMALISTA) -->
+        <section id="acerca" class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="forza-img-wrapper">
+                            <img src="Imagenes/Engines.jpg" alt="Motor de vehículo en mantenimiento" class="img-fluid rounded-3 shadow-sm">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="forza-eyebrow mb-2">SOBRE NOSOTROS</p>
+                        <h2 class="h2 fw-bold text-dark mb-3">Comprometidos con el rendimiento y seguridad de tu vehículo</h2>
+                        <p class="text-secondary mb-3">
+                            En <strong>Hudsen Tech Motorsport</strong> combinamos herramientas de diagnóstico de última generación con procesos estandarizados para garantizar que cada intervención cumpla con las especificaciones exactas del fabricante.
+                        </p>
+                        <p class="text-secondary mb-4">
+                            Nuestra plataforma web te permite registrar solicitudes de atención en segundos y consultar el progreso de tu automóvil de forma transparente en cada etapa.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded-3 border-start border-3 border-danger">
+                                    <div class="fw-bold text-dark">Horario Continuo</div>
+                                    <div class="small text-secondary">Lunes a Sábado: 08:00 - 18:00</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded-3 border-start border-3 border-info">
+                                    <div class="fw-bold text-dark">Garantía Certificada</div>
+                                    <div class="small text-secondary">Repuestos originales y OEM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#servicios" class="btn btn-forza-outline-dark px-4 py-2">Ver catálogo técnico</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 1: CATÁLOGO DE SERVICIOS -->
+        <section id="servicios" class="py-5 forza-bg-paddock">
+            <div class="container py-4">
+                <div class="text-center max-w-600 mx-auto mb-5">
+                    <p class="forza-eyebrow mb-2">NUESTROS SERVICIOS</p>
+                    <h2 class="h2 fw-bold text-dark mb-2">¿Qué necesita tu vehículo?</h2>
+                    <p class="text-secondary mb-0">Conoce nuestros principales programas de mantenimiento y selecciona el que requieras para agendar tu cita.</p>
+                </div>
+                <div class="row g-4" id="contenedorServicios">
+                    <!-- Generado dinámicamente con JS map() -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ZONA OPERATIVA (PERFIL, FORMULARIO Y TABLAS CRUD) -->
+        <div class="container my-5">
+
+            <!-- PERFIL DE USUARIO AUTENTICADO -->
+            <section id="seccionPerfil" class="mb-4 p-4 bg-white rounded-3 shadow-sm border-top border-3 border-info d-none">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="h5 fw-bold text-dark mb-0">Datos del Perfil Activo</h2>
+                    <span class="small text-secondary">Sesión verificada</span>
+                </div>
+                <div class="row g-3" id="datosPerfil"></div>
+            </section>
+
+            <!-- MÓDULO 2: FORMULARIO DE SOLICITUD DE MANTENIMIENTO -->
+            <section id="seccionFormulario" class="mb-5 p-4 p-lg-5 bg-white rounded-3 shadow-sm border d-none">
+                <div class="border-bottom pb-3 mb-4">
+                    <p class="forza-eyebrow mb-1">ORDEN DE SERVICIO</p>
+                    <h2 class="h4 fw-bold text-dark mb-0" id="tituloFormulario">Registrar Solicitud de Mantenimiento</h2>
+                </div>
+
+                <form id="formMantenimiento" novalidate>
+                    <input type="hidden" id="solicitudId">
+                    <div class="row g-3">
+                        <!-- Datos del Cliente -->
+                        <div class="col-md-4">
+                            <label for="clienteNombre" class="form-label fw-semibold">Nombre del Cliente *</label>
+                            <input type="text" class="form-control" id="clienteNombre" placeholder="Ej. Robert Buri" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="clienteEmail" class="form-label fw-semibold">Correo Electrónico *</label>
+                            <input type="email" class="form-control" id="clienteEmail" placeholder="cliente@correo.com" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="clienteTelefono" class="form-label fw-semibold">Teléfono Móvil *</label>
+                            <input type="text" class="form-control" id="clienteTelefono" placeholder="0987654321" maxlength="10" required>
+                            <div class="form-text">10 dígitos numéricos sin espacios.</div>
+                        </div>
+
+                        <!-- Datos del Automóvil -->
+                        <div class="col-md-3">
+                            <label for="vehiculoPlaca" class="form-label fw-semibold">Placa *</label>
+                            <input type="text" class="form-control text-uppercase" id="vehiculoPlaca" placeholder="PBA-1234" required>
+                            <div class="form-text">Formato: ABC-1234</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="vehiculoMarca" class="form-label fw-semibold">Marca *</label>
+                            <input type="text" class="form-control" id="vehiculoMarca" placeholder="Chevrolet, Mazda, Toyota..." required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="vehiculoModelo" class="form-label fw-semibold">Modelo *</label>
+                            <input type="text" class="form-control" id="vehiculoModelo" placeholder="Sail, CX-5, Corolla..." required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="vehiculoAnio" class="form-label fw-semibold">Año *</label>
+                            <input type="number" class="form-control" id="vehiculoAnio" min="1980" max="2027" placeholder="2023" required>
+                            <div class="form-text">Entre 1980 y 2027</div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="vehiculoKm" class="form-label fw-semibold">Kilometraje Actual (km) *</label>
+                            <input type="number" class="form-control" id="vehiculoKm" min="1" max="1000000" placeholder="45000" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="tipoServicio" class="form-label fw-semibold">Tipo de Servicio *</label>
+                            <select class="form-select" id="tipoServicio" required>
+                                <option value="">Seleccione un servicio...</option>
+                                <option value="Mantenimiento General">Mantenimiento General</option>
+                                <option value="Cambio de Aceite y Filtros">Cambio de Aceite y Filtros</option>
+                                <option value="Revisión de Frenos y Suspensión">Revisión de Frenos y Suspensión</option>
+                                <option value="Diagnóstico Electrónico Escáner">Diagnóstico Electrónico Escáner</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="fechaCita" class="form-label fw-semibold">Fecha *</label>
+                            <input type="date" class="form-control" id="fechaCita" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="horaCita" class="form-label fw-semibold">Hora *</label>
+                            <select class="form-select" id="horaCita" required>
+                                <!-- Generado con bucle for -->
+                            </select>
+                        </div>
+
+                        <!-- Radio buttons: Modalidad -->
+                        <div class="col-md-6 mt-3">
+                            <label class="form-label fw-semibold d-block">Prioridad de Atención *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="modalidad" id="modNormal" value="Estándar" checked>
+                                <label class="form-check-label" for="modNormal">Recepción Estándar</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="modalidad" id="modExpress" value="Express">
+                                <label class="form-check-label" for="modExpress">Servicio Express</label>
+                            </div>
+                        </div>
+
+                        <!-- Checkboxes: Adicionales -->
+                        <div class="col-md-6 mt-3">
+                            <label class="form-label fw-semibold d-block">Inspecciones Adicionales (Opcional)</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input check-extra" type="checkbox" id="extraLavado" value="Lavado Exterior">
+                                <label class="form-check-label" for="extraLavado">Lavado Exterior</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input check-extra" type="checkbox" id="extraFluidos" value="Nivelación de Fluidos">
+                                <label class="form-check-label" for="extraFluidos">Nivelación de Fluidos</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input check-extra" type="checkbox" id="extraBateria" value="Test de Batería">
+                                <label class="form-check-label" for="extraBateria">Test de Batería</label>
+                            </div>
+                        </div>
+
+                        <!-- Textarea: Observaciones -->
+                        <div class="col-12 mt-3">
+                            <label for="observaciones" class="form-label fw-semibold">Observaciones o Síntomas del Vehículo *</label>
+                            <textarea class="form-control" id="observaciones" rows="2" placeholder="Detalle ruidos, alertas en el tablero o requerimientos específicos..." required></textarea>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap gap-2 mt-4 pt-2 border-top">
+                            <button type="submit" class="btn btn-forza-primary px-4" id="btnGuardarSolicitud">Guardar solicitud</button>
+                            <button type="button" class="btn btn-outline-secondary px-3" id="btnLimpiarForm">Limpiar campos</button>
+                            <button type="button" class="btn btn-dark px-3 d-none" id="btnCancelarEdicion">Cancelar edición</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- MÓDULO 3: VISTA CLIENTE (MIS MANTENIMIENTOS) -->
+            <section id="seccionCliente" class="mb-5 p-4 bg-white rounded-3 shadow-sm border d-none">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                    <div>
+                        <p class="forza-eyebrow mb-1">HISTORIAL PERSONAL</p>
+                        <h2 class="h4 fw-bold text-dark mb-0">Mis Solicitudes de Mantenimiento</h2>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Código</th>
+                                <th>Vehículo / Placa</th>
+                                <th>Kilometraje</th>
+                                <th>Servicio Solicitado</th>
+                                <th>Fecha y Hora</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaClienteBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- MÓDULO 3: VISTA ADMINISTRADOR (CRUD GENERAL) -->
+            <section id="seccionAdmin" class="mb-5 p-4 bg-white rounded-3 shadow-sm border-top border-3 border-danger d-none">
+                <div class="d-flex flex-wrap justify-content-between align-items-center border-bottom pb-3 mb-3">
+                    <div>
+                        <p class="forza-eyebrow mb-1">GESTIÓN INTERNA DE TALLER</p>
+                        <h2 class="h4 fw-bold text-dark mb-0">Panel de Administración General (CRUD)</h2>
+                    </div>
+                    <span class="badge bg-dark px-3 py-2" id="contadorTotalAdmin">0 registros</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente / Contacto</th>
+                                <th>Vehículo / Placa</th>
+                                <th>Servicio y Notas</th>
+                                <th>Cita</th>
+                                <th>Estado de Atención</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaAdminBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BANNER CTA INFERIOR (ESTILO CAPTURA 3) -->
+        <section class="forza-cta-banner text-center text-white py-5">
+            <div class="container py-3">
+                <h2 class="h2 fw-bold mb-2">¿Necesitas mantenimiento para tu vehículo?</h2>
+                <p class="text-secondary mb-4">Nuestro equipo técnico está listo para recibir tu automóvil con atención programada.</p>
+                <button class="btn btn-forza-primary px-4 py-2" id="btnCtaInferior">Solicitar cita ahora</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DE LOGIN (CON ACCESOS RÁPIDOS - HEURÍSTICA DE NIELSEN #6 Y #7) -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header forza-modal-header text-white">
+                    <h5 class="modal-title fw-bold">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formLogin">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label fw-semibold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="usuario@correo.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="loginPassword" class="form-label fw-semibold">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-forza-primary w-100 py-2">Ingresar al portal</button>
+                    </form>
+
+                    <div class="mt-4 pt-3 border-top">
+                        <p class="small fw-semibold text-secondary mb-2">Cuentas de prueba (clic para autocompletar):</p>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-sm btn-outline-dark text-start" onclick="autocompletarLogin('admin@autotech.com', 'Admin123')">
+                                <strong>Administrador:</strong> admin@autotech.com
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary text-start" onclick="autocompletarLogin('cliente1@correo.com', 'Cliente123')">
+                                <strong>Cliente 1 (Robert):</strong> cliente1@correo.com
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary text-start" onclick="autocompletarLogin('cliente2@correo.com', 'Cliente123')">
+                                <strong>Cliente 2 (María):</strong> cliente2@correo.com
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-danger text-start" onclick="autocompletarLogin('bloqueado@correo.com', 'Bloqueado123')">
+                                <strong>Cuenta Suspendida:</strong> bloqueado@correo.com
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER MINIMALISTA (Módulo 1) -->
+    <footer class="forza-footer text-center py-4 mt-auto">
+        <div class="container">
+            <p class="fw-bold text-forza-red mb-1 tracking-wide">Hudsen Tech MOTORSPORT</p>
+            <p class="small text-light opacity-75 mb-2">Comprometidos con el cuidado y precisión de tu vehículo.</p>
+            <p class="small text-secondary mb-0">© 2026 Hudsen Tech Motorsport — Instituto Superior Tecnológico Cordillera | Programación Web I (AD01)</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS y SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
